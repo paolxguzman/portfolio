@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paola Guzman — Sound Mixer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600;1,800&display=swap" rel="stylesheet">
+<style>
+:root { --navbar-height:72px; }
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Inter', sans-serif;
+  color:#fff;
+  background:#000;
+  height:1200vh;
+  overflow-x:hidden;
+}
+
+/* Navbar */
+header.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:var(--navbar-height);
+  padding:1rem 2rem;
+  z-index:50;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#5c1a1b;
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+.brand { font-weight:800; font-size:1.2rem; color:#fff; text-decoration:none; cursor:pointer; }
+.menu-wrapper { display:flex; gap:1.5rem; align-items:center; }
+.menu-item { color:#fff; text-decoration:none; font-weight:600; }
+
+/* Hero */
+.hero {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  pointer-events:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: opacity 0.8s ease;
+}
+.hero img {
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  object-fit:cover;
+}
+
+/* Hero text */
+.hero-text{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+  max-width:80%;
+  z-index:25;
+  font-weight:600;
+  font-size:2rem;
+  line-height:1.4;
+}
+@media (max-width:640px){ .hero-text{ font-size:1.5rem; } }
+
+/* Scroll arrow */
+.scroll-arrow {
+  position:fixed;
+  left:50%;
+  bottom:5%;
+  width:30px;
+  height:30px;
+  border-left:3px solid #fff;
+  border-bottom:3px solid #fff;
+  transform:translateX(-50%) rotate(-45deg);
+  animation: bounce 1.2s infinite;
+  z-index:30;
+}
+@keyframes bounce {
+  0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0) rotate(-45deg); }
+  40% { transform: translateX(-50%) translateY(8px) rotate(-45deg); }
+  60% { transform: translateX(-50%) translateY(4px) rotate(-45deg); }
+}
+
+/* Bottom bar quadrants */
+.bottom-bar {
+  position:fixed;
+  top:var(--navbar-height);
+  left:0;
+  width:100%;
+  height: calc(100vh - var(--navbar-height));
+  display:none;
+  z-index:60;
+}
+
+/* Quadrant items */
+.bottom-item {
+  position:absolute;
+  width:50%;
+  height:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  text-transform:uppercase;
+  font-size:3rem;
+  text-decoration:none;
+  overflow:hidden;
+  color:#fff;
+}
+.bottom-item.sound-equip span { display:block; line-height:1.2; }
+
+.bottom-item[data-quadrant="top-left"] { top:0; left:0; }
+.bottom-item[data-quadrant="top-right"] { top:0; right:0; }
+.bottom-item[data-quadrant="bottom-left"] { bottom:0; left:0; }
+.bottom-item[data-quadrant="bottom-right"] { bottom:0; right:0; }
+
+.quadrant-bg {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  background:black;
+}
+
+/* Rays rotation and pulse */
+@keyframes rotateRays {
+  from { transform: rotate(0deg) scale(1); }
+  to   { transform: rotate(360deg) scale(1); }
+}
+@keyframes pulseRays {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.05); }
+}
+.bottom-bar.show .quadrant-bg svg g {
+  transform-origin:50% 50%;
+  animation: rotateRays 120s linear infinite, pulseRays 4s ease-in-out infinite;
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="brand">PAOLA GUZMAN</a>
+  <nav class="menu-wrapper">
+    <a href="work.html" class="menu-item">Work</a>
+    <a href="about.html" class="menu-item">About</a>
+    <a href="contact.html" class="menu-item">Contact</a>
+    <a href="equipment.html" class="menu-item">Sound Equipment List</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="myphoto.jpg" id="img0">
+  <img src="myphoto1.jpg" id="img1">
+  <img src="myphoto2.jpg" id="img2">
+  <img src="myphoto3.jpg" id="img3">
+  <img src="myphoto4.jpg" id="img4">
+  <img src="myphoto5.jpg" id="img5">
+  <img src="myphoto6.jpg" id="img6">
+  <img src="myphoto7.jpg" id="img7">
+  <img src="myphoto8.jpg" id="img8">
+</div>
+
+<div class="hero-text">
+Hi! My name is Paola (or Apollo) and I’m a Production Sound Mixer based in LA.
+</div>
+
+<div class="scroll-arrow"></div>
+
+<div class="bottom-bar">
+  <a href="work.html" class="bottom-item" data-quadrant="top-left"><div class="quadrant-bg"></div>Work</a>
+  <a href="about.html" class="bottom-item" data-quadrant="top-right"><div class="quadrant-bg"></div>About</a>
+  <a href="contact.html" class="bottom-item" data-quadrant="bottom-left"><div class="quadrant-bg"></div>Contact</a>
+  <a href="equipment.html" class="bottom-item sound-equip" data-quadrant="bottom-right"><div class="quadrant-bg"></div><span>Sound</span><span>Equipment</span><span>List</span></a>
+</div>
+
+<script>
+const images = [];
+for(let i=0;i<=8;i++){ images.push(document.getElementById(`img${i}`)); }
+images[0].style.opacity = 1;
+
+const heroEl = document.querySelector('.hero');
+const heroText = document.querySelector('.hero-text');
+const scrollArrow = document.querySelector('.scroll-arrow');
+const bottomBar = document.querySelector('.bottom-bar');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const frameScrollHeight = maxScroll / (images.length - 1);
+  const targetFrame = Math.min(images.length - 1, Math.floor(scrollTop / frameScrollHeight));
+
+  images.forEach((img,i)=>{
+    const parallax = (scrollTop / maxScroll) * 15;
+    const scale = 1 + (scrollTop / maxScroll) * 0.02;
+    img.style.transform = `translateY(${parallax}px) scale(${scale})`;
+    img.style.opacity = (i === targetFrame) ? 1 : 0;
+  });
+
+  const textParallax = (scrollTop / maxScroll) * 10;
+  const textScale = 1 + (scrollTop / maxScroll) * 0.02;
+  heroText.style.transform = `translate(-50%, calc(-50% + ${textParallax}px)) scale(${textScale})`;
+
+  if(scrollTop > maxScroll * 0.9){
+    heroEl.style.opacity = 0;
+    heroText.style.opacity = 0;
+    scrollArrow.style.opacity = 0;
+    bottomBar.style.display = 'block';
+    bottomBar.classList.add('show');
+  } else {
+    heroEl.style.opacity = 1;
+    heroText.style.opacity = 1;
+    scrollArrow.style.opacity = 1;
+    bottomBar.classList.remove('show');
+  }
+});
+
+// Generate rays dynamically for all quadrants, covering the full quadrant
+document.querySelectorAll('.quadrant-bg').forEach(bg=>{
+  const rect = bg.getBoundingClientRect();
+  const width = rect.width;
+  const height = rect.height;
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS,"svg");
+  svg.setAttribute("width","100%");
+  svg.setAttribute("height","100%");
+  svg.setAttribute("viewBox",`0 0 ${width} ${height}`);
+  const g = document.createElementNS(svgNS,"g");
+  g.setAttribute("stroke","white");
+  g.setAttribute("stroke-width","0.5");
+  g.setAttribute("stroke-linecap","round");
+  g.setAttribute("transform",`translate(${width/2} ${height/2})`);
+
+  const numRays = 80;
+  for(let i=0;i<numRays;i++){
+    const angle = (360/numRays)*i;
+    const length = Math.sqrt((width/2)**2 + (height/2)**2);
+    const line = document.createElementNS(svgNS,"line");
+    line.setAttribute("x1","0");
+    line.setAttribute("y1","0");
+    line.setAttribute("x2","0");
+    line.setAttribute("y2", -length);
+    line.setAttribute("transform", `rotate(${angle})`);
+    g.appendChild(line);
+  }
+  svg.appendChild(g);
+  bg.appendChild(svg);
+});
+</script>
+</body>
+</html>
