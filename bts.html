@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paola Guzman — BTS Photography</title>
+<link rel="icon" type="image/png" href="sun.png"> <!-- ⬅️ Favicon added -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+<style>
+:root { --wine:#5c1a1b; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter', sans-serif;
+  background:#000;
+  color:#fff;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+header {
+  position: fixed; top:0; left:0; width:100%;
+  padding:2rem 3rem;
+  display:flex; justify-content: space-between; align-items:center;
+  background:rgba(92,26,27,0.9);
+  z-index:1000;
+  font-size:0.9rem; text-transform: uppercase; letter-spacing:0.08rem;
+}
+header .logo a { text-decoration:none; color:#fff; font-weight:900; font-size:1.2rem; }
+header nav a { text-decoration:none; color:#fff; margin-left:2rem; transition:opacity 0.3s; }
+header nav a:hover { opacity:0.6; }
+
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  padding: 6rem 2rem 3rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+}
+
+h1 {
+  font-size:3rem;
+  font-weight:900;
+  margin-bottom:2rem;
+}
+
+h2 {
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:2rem;
+  border-bottom:2px solid var(--wine);
+  display:inline-block;
+  padding-bottom:0.5rem;
+}
+
+.album {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap:1rem;
+  width:100%;
+  max-width:1100px;
+}
+.album img {
+  width:100%;
+  border-radius:15px;
+  opacity:0;
+  transform:translateY(40px);
+  animation: fadeUp 1s forwards;
+}
+.album img:nth-child(odd) { animation-delay:0.2s; }
+.album img:nth-child(even) { animation-delay:0.4s; }
+
+@keyframes fadeUp {
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* Dot Navigation */
+#dotNav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1001;
+}
+#dotNav a {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #555;
+  display: block;
+  transition: background 0.3s, transform 0.3s;
+}
+#dotNav a.active {
+  background: var(--wine);
+  transform: scale(1.2);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html">Paola Guzman</a></div>
+  <nav>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="equipment.html">Equipment</a>
+    <a href="bts.html">BTS</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Dot Navigation -->
+<div id="dotNav">
+  <a href="#intro" class="active"></a>
+  <a href="#bf"></a>
+  <a href="#o"></a>
+  <a href="#gd"></a>
+  <a href="#ci"></a>
+  <a href="#tt"></a>
+</div>
+
+<section id="intro">
+  <h1>BTS Photography</h1>
+  <p>Behind the scenes moments I’ve captured across different film sets.</p>
+</section>
+
+<section id="bf">
+  <h2>Beyond Female</h2>
+  <div class="album">
+    <img src="bts-bf1.jpg" alt="">
+    <img src="bts-bf2.jpg" alt="">
+    <img src="bts-bf3.jpg" alt="">
+    <img src="bts-bf4.jpg" alt="">
+    <img src="bts-bf5.jpg" alt="">
+    <img src="bts-bf6.jpg" alt="">
+    <img src="bts-bf7.jpg" alt="">
+    <img src="bts-bf8.jpg" alt="">
+    <img src="bts-bf9.jpg" alt="">
+    <img src="bts-bf10.jpg" alt="">
+  </div>
+</section>
+
+<section id="o">
+  <h2>Outed</h2>
+  <div class="album">
+    <img src="bts-o2.jpg" alt="">
+    <img src="bts-o3.jpg" alt="">
+    <img src="bts-o4.jpg" alt="">
+    <img src="bts-o5.jpg" alt="">
+    <img src="bts-o6.jpg" alt="">
+    <img src="bts-o7.jpg" alt="">
+    <img src="bts-o8.jpg" alt="">
+    <img src="bts-o9.jpg" alt="">
+    <img src="bts-o10.jpg" alt="">
+  </div>
+</section>
+
+<section id="gd">
+  <h2>Girl Dinner</h2>
+  <div class="album">
+    <img src="bts-gd1.jpg" alt="">
+    <img src="bts-gd2.jpg" alt="">
+    <img src="bts-gd3.jpg" alt="">
+    <img src="bts-gd4.jpg" alt="">
+  </div>
+</section>
+
+<section id="ci">
+  <h2>Coral: Interview</h2>
+  <div class="album">
+    <img src="bts-ci1.jpg" alt="">
+    <img src="bts-ci2.jpg" alt="">
+    <img src="bts-ci3.jpg" alt="">
+    <img src="bts-ci4.jpg" alt="">
+    <img src="bts-ci5.jpg" alt="">
+  </div>
+</section>
+
+<section id="tt">
+  <h2>The Talk</h2>
+  <div class="album">
+    <img src="bts-tt1.jpg" alt="">
+    <img src="bts-tt2.jpg" alt="">
+    <img src="bts-tt3.jpg" alt="">
+    <img src="bts-tt4.jpg" alt="">
+  </div>
+</section>
+
+<script>
+// Update active dot on scroll
+const sections = document.querySelectorAll("section");
+const dots = document.querySelectorAll("#dotNav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  dots.forEach(dot => {
+    dot.classList.remove("active");
+    if (dot.getAttribute("href") === "#" + current) {
+      dot.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
