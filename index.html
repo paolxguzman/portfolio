@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paola Guzman — Sound Mixer</title>
+<link rel="icon" type="image/png" href="sun.png"> <!-- ⬅️ Favicon added -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+<style>
+:root { --wine: #5c1a1b; }
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter', sans-serif;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  padding:2rem 3rem;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background:var(--wine);
+  z-index:1000;
+  font-size:0.9rem;
+  text-transform: uppercase;
+  letter-spacing:0.08rem;
+}
+header .logo a {
+  text-decoration:none;
+  color:#fff;
+  font-weight:900;
+  font-size:1.2rem;
+}
+header nav a {
+  text-decoration:none;
+  color:#fff;
+  transition:opacity 0.3s;
+}
+header nav a:hover { opacity:0.6; }
+
+/* HERO */
+.hero {
+  position:relative;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  text-align:center;
+  padding: 0 1rem;
+}
+.hero-title {
+  font-size:4rem;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-0.05em;
+  margin-bottom:1rem;
+}
+.hero-subtitle {
+  font-size:1.2rem;
+  font-weight:300;
+  opacity:0.8;
+  transition: transform 1s ease;
+}
+
+/* HERO DECK */
+.hero-stack {
+  position:relative;
+  width:300px;
+  height:400px;
+  margin-bottom:2rem;
+}
+.hero-stack img {
+  position:absolute;
+  width:300px;
+  height:400px;
+  object-fit:cover;
+  border-radius:6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  top:0; left:0;
+  transition: transform 1s ease;
+}
+
+/* CATEGORIES */
+.categories {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  display:flex;
+  flex-direction: column;
+  gap:1.5rem;
+  opacity:0;
+  pointer-events:none;
+  text-align:center;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.08rem;
+}
+.categories a {
+  color:#fff;
+  text-decoration:none;
+  font-size:1.2rem;
+  opacity:0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.categories a:hover { opacity:0.6; }
+
+/* ---------- RESPONSIVE ADJUSTMENTS ---------- */
+@media (max-width: 768px) {
+  header {
+    padding:1rem 1.5rem;
+    font-size:0.8rem;
+  }
+  header .logo a { font-size:1rem; }
+
+  .hero-title { font-size:2.5rem; }
+  .hero-subtitle { font-size:1rem; }
+
+  .hero-stack {
+    width:200px;
+    height:260px;
+  }
+  .hero-stack img {
+    width:200px;
+    height:260px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding:0.8rem 1rem;
+    font-size:0.7rem;
+  }
+  header .logo a { font-size:0.9rem; }
+
+  .hero-title { font-size:2rem; margin-bottom:0.5rem; }
+  .hero-subtitle { font-size:0.9rem; }
+
+  .hero-stack {
+    width:160px;
+    height:210px;
+  }
+  .hero-stack img {
+    width:160px;
+    height:210px;
+  }
+
+  .categories a { font-size:1rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="#">Paola Guzman</a></div>
+  <nav>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<section class="hero" id="heroSection">
+  <h1 class="hero-title">HI! I'M PAOLA GUZMÁN</h1>
+  <div class="hero-stack" id="heroStack">
+    <img src="myphoto.jpg" id="img0">
+    <img src="myphoto1.jpg" id="img1">
+    <img src="myphoto2.jpg" id="img2">
+    <img src="myphoto3.jpg" id="img3">
+    <img src="myphoto4.jpg" id="img4">
+    <img src="myphoto5.jpg" id="img5">
+    <img src="myphoto6.jpg" id="img6">
+    <img src="myphoto7.jpg" id="img7">
+    <img src="myphoto8.jpg" id="img8">
+    <img src="myphoto9.JPEG" id="img9">
+  </div>
+  <p class="hero-subtitle" id="heroSubtitle">A PRODUCTION SOUND MIXER BASED IN LOS ANGELES</p>
+
+  <div class="categories" id="categories">
+    <a href="work.html">FILM WORK</a>
+    <a href="bts.html">BTS PHOTOGRAPHY</a>
+    <a href="about.html">ABOUT</a>
+    <a href="equipment.html">SOUND EQUIPMENT LIST</a>
+  </div>
+</section>
+
+<script>
+const heroSection = document.getElementById('heroSection');
+const heroImages = [];
+for(let i=0;i<=9;i++){ heroImages.push(document.getElementById(`img${i}`)); }
+const categories = document.getElementById('categories');
+const categoryLinks = categories.querySelectorAll('a');
+const heroSubtitle = document.getElementById('heroSubtitle');
+
+// Initial deck spread
+heroImages.forEach((img, idx)=>{
+  const offsetX = (idx-4.5)*8; 
+  const offsetY = (idx-4.5)*4; 
+  img.style.transform = `translateX(${offsetX}px) translateY(${offsetY}px) rotate(${(idx-4.5)*2}deg)`;
+});
+
+heroSection.addEventListener('click', ()=>{
+  const spacingY = 180;
+  const screenWidth = window.innerWidth;
+  const imgWidth = heroImages[0].offsetWidth;
+
+  heroImages.forEach((img, idx)=>{
+    const direction = idx % 2 === 0 ? -1 : 1;
+    const extraX = Math.random() * 20;
+    const extraY = Math.random() * 20 - 10;
+    const x = direction * (screenWidth/2 - imgWidth/2 - extraX);
+    const y = idx * spacingY + extraY;
+    const rotation = Math.random()*15 - 7.5;
+    img.style.transform = `translateX(${x}px) translateY(${y}px) rotate(${rotation}deg)`;
+  });
+
+  const lastY = (heroImages.length - 1) * spacingY + 400;
+  document.body.style.height = `${lastY + window.innerHeight}px`;
+
+  heroSubtitle.style.transform = "translateY(20px)";
+
+  categories.style.opacity = 1;
+  categories.style.pointerEvents = "auto";
+
+  categoryLinks.forEach((link, i)=>{
+    setTimeout(()=>{
+      link.style.opacity = 1;
+      link.style.transform = "translateY(0)";
+    }, i*200);
+  });
+});
+</script>
+
+</body>
+</html>
