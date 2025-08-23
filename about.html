@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paola Guzman — About</title>
+<link rel="icon" type="image/png" href="sun.png"> <!-- ⬅️ Favicon added -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+<style>
+:root { --wine:#5c1a1b; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter', sans-serif;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  padding:1.2rem 2rem;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background:var(--wine);
+  z-index:1000;
+  font-size:0.85rem;
+  text-transform: uppercase;
+  letter-spacing:0.08rem;
+}
+header .logo a { text-decoration:none; color:#fff; font-weight:900; font-size:1.1rem; }
+header nav a { text-decoration:none; color:#fff; transition:opacity 0.3s; }
+header nav a:hover { opacity:0.6; }
+
+/* Background photo */
+.bg-photo {
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0.18;
+  z-index:-1;
+  transform: translateY(0);
+  transition: transform 0.1s ease-out;
+}
+
+/* Main layout */
+main {
+  max-width:800px;
+  margin:0 auto;
+  padding-top:100px;
+  padding-bottom:60px;
+}
+.section {
+  min-height:auto;
+  margin:2rem 0;
+  text-align:center;
+  opacity:0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  padding:0 1rem;
+}
+.section.active {
+  opacity:1;
+  transform: translateY(0);
+}
+h1, h2 { font-weight:900; letter-spacing:0.05rem; margin-bottom:1rem; }
+h1 { font-size:2.2rem; }
+p { margin-bottom:1.5rem; font-size:1.05rem; opacity:0.9; line-height:1.6; }
+img.gallery-photo {
+  width:100%;
+  max-width:450px;
+  border-radius:8px;
+  margin:1.5rem auto;
+  opacity:0.9;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+img.gallery-photo:hover {
+  transform: scale(1.04);
+  opacity:1;
+}
+@media screen and (max-width:768px){
+  h1 { font-size:1.8rem; }
+  p { font-size:1rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html">Paola Guzman</a></div>
+  <nav>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="equipment.html">Equipment</a>
+    <a href="bts.html">BTS</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<style>
+header {
+  position: fixed; 
+  top:0; left:0; 
+  width:100%;
+  padding:2rem 3rem;
+  display:flex; 
+  justify-content: space-between; 
+  align-items:center;
+  background:rgba(92,26,27,0.9); /* Same semi-transparent wine background */
+  z-index:1000;
+  font-size:0.9rem; 
+  text-transform: uppercase; 
+  letter-spacing:0.08rem;
+}
+header .logo a { 
+  text-decoration:none; 
+  color:#fff; 
+  font-weight:900; 
+  font-size:1.2rem; 
+}
+header nav a { 
+  text-decoration:none; 
+  color:#fff; 
+  margin-left:2rem; 
+  transition:opacity 0.3s; 
+}
+header nav a:hover { 
+  opacity:0.6; 
+}
+</style>
+
+<img src="myphoto.jpg" class="bg-photo" alt="Background">
+
+<main>
+  <section class="section active">
+    <h1>About Paola Guzmán</h1>
+    <p>Paola Guzmán is a production sound mixer based in Los Angeles. Originally from El Salvador, she moved to the United States in 2018 and began studying film as a career in 2022.</p>
+  </section>
+
+  <section class="section">
+    <img src="10myphoto.jpeg" alt="Paola Photo 10" class="gallery-photo">
+  </section>
+
+  <section class="section">
+    <p>She discovered her passion for sound in the spring of 2023, quickly immersing herself in production audio and developing a keen skill for capturing immersive, high-quality sound for narrative, commercial, and independent projects.</p>
+  </section>
+
+  <section class="section">
+    <img src="14myphoto.JPG" alt="Paola Photo 14" class="gallery-photo">
+  </section>
+
+  <section class="section">
+    <p>She is a participant in the BAFTA Vance Byrd Mentorship Program and currently serves as Vice President of the LAVC Cinema Club, consistently seeking to refine her craft and mentor other emerging filmmakers.</p>
+  </section>
+
+  <section class="section">
+    <p>Paola often says that “sound saved her life”: during a critical hospitalization that lasted a month, completing her sound class assignments was what kept her going. This experience sparked a profound passion for the sound profession, which continues to inform and inspire her work today.</p>
+  </section>
+</main>
+
+<script>
+// Fade-in sections
+const sections = document.querySelectorAll('.section');
+const bgPhoto = document.querySelector('.bg-photo');
+
+function checkSections() {
+  const trigger = window.innerHeight / 1.15;
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if(top < trigger) section.classList.add('active');
+  });
+}
+window.addEventListener('scroll', checkSections);
+window.addEventListener('load', checkSections);
+
+// Subtle parallax background
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  bgPhoto.style.transform = `translateY(${scrolled * 0.1}px)`; 
+});
+</script>
+
+</body>
+</html>
