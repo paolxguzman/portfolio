@@ -1,109 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Paola Guzman — Sound Mixer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
-<style>
-<link rel="stylesheet" href="style.css">
-
-</style>
-</head>
-  <script>
-  // Disable zoom with keyboard shortcuts
-  document.addEventListener('keydown', function(e) {
-    if ((e.ctrlKey || e.metaKey) && 
-        (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
-      e.preventDefault();
-    }
-  });
-
-  // Disable zoom with mouse scroll + Ctrl/Cmd
-  document.addEventListener('wheel', function(e) {
-    if (e.ctrlKey || e.metaKey) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-</script>
-<body>
-
-<header>
-  <div class="logo"><a href="index.html">Paola Guzman</a></div>
-  <nav>
-    <a href="work.html">Work</a>
-    <a href="about.html">About</a>
-    <a href="equipment.html">Equipment</a>
-    <a href="bts.html">BTS</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<style>
-header {
-  position: fixed; 
-  top:0; left:0; 
-  width:100%;
-  padding:2rem 3rem;
-  display:flex; 
-  justify-content: space-between; 
-  align-items:center;
-  background:rgba(92,26,27,0.9); /* Same semi-transparent wine background */
-  z-index:1000;
-  font-size:0.9rem; 
-  text-transform: uppercase; 
-  letter-spacing:0.08rem;
-}
-header .logo a { 
-  text-decoration:none; 
-  color:#fff; 
-  font-weight:900; 
-  font-size:1.2rem; 
-}
-header nav a { 
-  text-decoration:none; 
-  color:#fff; 
-  margin-left:2rem; 
-  transition:opacity 0.3s; 
-}
-header nav a:hover { 
-  opacity:0.6; 
-}
-</style>
-
-<main>
-  <div class="work-banner">
-    <img src="13image.JPG" alt="Previous Work">
-    <div class="banner-overlay"></div>
-    <h1 class="banner-title">PREVIOUS WORK</h1>
-  </div>
-
-  <div class="tab-nav">
-    <button data-target="narrative" class="active">Narrative</button>
-    <button data-target="commercial">Commercial</button>
-    <button data-target="personal">Personal</button>
-    <button data-target="comingsoon">Coming Soon</button>
-  </div>
-
-  <!-- NARRATIVE -->
-  <section id="narrative" class="section active">
-    <h2>Narrative</h2>
-    <div class="carousel-container">
-      <button class="arrow arrow-left">&#10094;</button>
-      <div class="work-carousel">
-
-        <!-- Kyler’s New Friend -->
-<div class="work-single">
-  <a href="https://www.youtube.com/watch?v=frPczQZ1Jek" target="_blank" class="thumbnail-link">
-    <img src="https://img.youtube.com/vi/frPczQZ1Jek/hqdefault.jpg" alt="Kyler’s New Friend Thumbnail">
-  </a>
-  <div class="work-info">
-    <h3>Kyler’s New Friend</h3>
+</a>
+<div class="work-info">
+<h3>Kyler’s New Friend</h3>
+    <p>LAVC Thesis Film</p>
     <p>LAVC Film Production Major Thesis Film</p>
-    <p>Production Date: April 2025</p>
-    <p>Job: Sound Mixer / Boom Operator</p>
-    <p>Winner – LAVC Cinema and Media Arts Student Showcase, Achievement in Sound Design</p>
-  </div>
+<p>Production Date: April 2025</p>
+<p>Job: Sound Mixer / Boom Operator</p>
+<p>Winner – LAVC Cinema and Media Arts Student Showcase, Achievement in Sound Design</p>
+</div>
 </div>
 
 <!-- Santos -->
@@ -120,192 +23,28 @@ header nav a:hover {
   </div>
 </div>
 
-        <!-- Dear Hollywood -->
-        <div class="work-single">
-          <a href="https://youtu.be/_1TrcqtF44E" target="_blank" class="thumbnail-link">
-            <img src="https://img.youtube.com/vi/_1TrcqtF44E/hqdefault.jpg" alt="Dear Hollywood Thumbnail">
-          </a>
-          <div class="work-info">
-            <h3>Dear Hollywood</h3>
-            <p>LAVC Anti-Racism Project Short Film</p>
-            <p>Production Date: October 2024</p>
-            <p>Job: Sound Mixer, Boom Operator</p>
-<p>Dear Hollywood is a compelling short film created as part of the Los Angeles Valley College (LAVC) Media Arts Anti-Racism Film Project. This initiative encourages students to craft short films addressing themes of anti-racism and social justice. The film critiques the systemic racism and lack of representation in the film industry, challenging Hollywood's ongoing patterns of racial stereotyping and exclusion. It calls for more authentic and diverse storytelling, aiming to inspire change within the entertainment industry.</p>          </div>
-        </div>
+<!-- Dear Hollywood -->
+<div class="work-single">
+<a href="https://youtu.be/_1TrcqtF44E" target="_blank" class="thumbnail-link">
+@@ -301,43 +315,43 @@
+<div class="carousel-container">
+<button class="arrow arrow-left">&#10094;</button>
+<div class="work-carousel">
 
-        <!-- Blue (embedded) -->
-        <div class="work-single">
-          <iframe src="https://www.youtube.com/embed/fV6YOq0LLrI" title="Blue" allowfullscreen></iframe>
-          <div class="work-info">
-            <h3>Blue</h3>
-            <p>LAVC Film Production Major Thesis Film</p>
-            <p>Production Date: April 2024</p>
-            <p>Job: Sound Mixer, Boom Operator</p>
-            <p>Winner – LAVC Cinema and Media Arts Student Showcase, Achievement in Sound Design</p>
-          </div>
-        </div>
-
-        <!-- Home -->
-        <div class="work-single">
-          <a href="https://youtu.be/LGCFxEotWKc" target="_blank" class="thumbnail-link">
-            <img src="https://img.youtube.com/vi/LGCFxEotWKc/hqdefault.jpg" alt="Home Thumbnail">
-          </a>
-          <div class="work-info">
-            <h3>Home</h3>
-            <p>USC 2025 Film Submission</p>
-            <p>Production Date: Feb 2025</p>
-            <p>Job: Sound Mixer, Boom Operator</p>
-          </div>
-        </div>
-
-        <!-- The Night Before 19 (embedded) -->
-        <div class="work-single">
-  <a href="https://www.youtube.com/watch?v=o15B7LR8jR4" target="_blank" class="thumbnail-link">
-    <img src="https://img.youtube.com/vi/o15B7LR8jR4/hqdefault.jpg" alt="The Night Before 19 Thumbnail">
-  </a>
-  <div class="work-info">
-    <h3>The Night Before 19</h3>
-    <p>LAVC Horror Short</p>
-    <p>Production Date: Dec 2024</p>
-    <p>Job: Sound Mixer, Boom Operator</p>
-  </div>
-</div>
-
-        <!-- No Solicitors (embedded YouTube) -->
-        <div class="work-single">
-          <iframe src="https://www.youtube.com/embed/5Dr4ptCKzRo" title="No Solicitors" allowfullscreen></iframe>
-          <div class="work-info">
-            <h3>No Solicitors</h3>
-            <p>LAVC Anti-Racism Short Film</p>
-            <p>Production Date: Oct 2024</p>
-            <p>Job: Sound Mixer, Boom Operator</p>
-            <p> No Solicitors is a short film created as part of the Los Angeles Valley College (LAVC) Media Arts Anti-Racism Film Project. This initiative encourages students to craft short films addressing themes of anti-racism and social justice.</p>
-            <p>Official Selection of Los Angeles Reel Film Festival 2023. Winner - San Bernardino Valley College Film Festival.</p>
-          </div>
-        </div>
-
-        <!-- Facade -->
-        <div class="work-single">
-          <a href="https://youtu.be/baB-uKDsmvs" target="_blank" class="thumbnail-link">
-            <img src="https://img.youtube.com/vi/baB-uKDsmvs/hqdefault.jpg" alt="Facade Thumbnail">
-          </a>
-          <div class="work-info">
-            <h3>Facade</h3>
-            <p>LAVC Thesis Film</p>
-            <p>Production Date: Apr 2024</p>
-            <p>Job: Sound Mixer, Boom Operator</p>
-          </div>
-        </div>
-
-        <!-- Buddies -->
-        <div class="work-single">
-          <a href="https://vimeo.com/991411645" target="_blank" class="thumbnail-link">
-            <img src="https://i.vimeocdn.com/video/991411645_640.jpg" alt="Buddies Thumbnail">
-          </a>
-          <div class="work-info">
-            <h3>Buddies</h3>
-            <p>The Backlot Filmmaker's Challenge Film</p>
-            <p>Production Date: Jul 2024</p>
-            <p>Job: Sound Mixer, Boom Operator</p>
-          </div>
-        </div>
-
-      </div>
-      <button class="arrow arrow-right">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- COMMERCIAL -->
-<section id="commercial" class="section">
-  <h2>Commercial</h2>
-  <div class="carousel-container">
-    <button class="arrow arrow-left">&#10094;</button>
-    <div class="work-carousel">
-      
-      <!-- VISIT RWANDA (IMAGE ONLY) -->
-      <div class="work-single">
-        <a href="psg.jpg" target="_blank" class="thumbnail-link">
-          <img src="psg.jpg" alt="VISIT RWANDA PSG & ATLÉTICO DE MADRID">
-        </a>
-        <div class="work-info">
-          <h3>VISIT RWANDA – PSG & ATLÉTICO DE MADRID</h3>
-          <p>Commercial Collaboration</p>
-          <p>Production Date: June 2025</p>
-          <p>Job: Sound Assistant</p>
-        </div>
-      </div>
-
-      <!-- Shazam -->
-      <div class="work-single">
-        <iframe src="https://www.youtube.com/embed/gkVpKbPSx2U" 
-                title="Shazam" allowfullscreen></iframe>
-        <div class="work-info">
-          <h3>Shazam</h3>
-          <p>Spec Commercial</p>
-          <p>Production Date: Dec 2023</p>
-          <p>Job: Boom Operator</p>
-        </div>
-      </div>
-
-    </div>
-    <button class="arrow arrow-right">&#10095;</button>
-  </div>
-</section>
-
-<style>
-/* Match photo & video dimensions */
-.work-single iframe, 
-.work-single img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  object-fit: cover;
-  display: block;
-}
-</style>
-
-
-  <!-- PERSONAL -->
-  <section id="personal" class="section">
-    <h2>Personal</h2>
-    <div class="carousel-container">
-      <button class="arrow arrow-left">&#10094;</button>
-      <div class="work-carousel">
-        <div class="work-single">
-          <iframe src="https://www.youtube.com/embed/wDUGUrP0YsQ" title="The Passenger" allowfullscreen></iframe>
-          <div class="work-info">
-            <h3>The Passenger</h3>
-            <p>Director</p>
-            <p>Production Date: February 2025</p>
-          </div>
-        </div>
-        <div class="work-single">
-          <div class="work-info">
-            <h3>Evacuation Order</h3>
-            <p>Director | LAVC 125 </p>
-            <p>Production Date: April 2025</p>
-          </div>
-        </div>
-      </div>
-      <button class="arrow arrow-right">&#10095;</button>
-    </div>
-  </section>
-
-<!-- COMING SOON -->
-<section id="comingsoon" class="section">
-  <h2>Coming Soon</h2>
-  <div class="carousel-container">
-    <button class="arrow arrow-left">&#10094;</button>
-    <div class="work-carousel">
+      <!-- Santos -->
 <!-- Visit Rwanda -->
-      <div class="work-single">
-        <div class="work-info">
+<div class="work-single">
+<div class="work-info">
+          <h3>Santos</h3>
+          <p>Vertical Series – August 2025</p>
+          <p>BTS Photographer</p>
           <h3>Visit Rwanda – PSG & Atlético de Madrid</h3>
           <p>Commercial Collaboration – June 2025</p>
           <p>Sound Assistant</p>
-        </div>
-      </div>
+</div>
+</div>
 
+      <!-- Coral: Interviews -->
 <!-- Do You Trust Me? -->
 <div class="work-single">
   <div class="work-info">
@@ -316,68 +55,71 @@ header nav a:hover {
 </div>
       
        <!-- Beyond Female -->
-      <div class="work-single">
-        <div class="work-info">
-          <h3>Beyond Female</h3>
-          <p>Independent Documentary – June 2025</p>
-          <p>Sound Mixer / Boom Operator</p>
-        </div>
-      </div>
-
-      <!-- Coral: Interviews -->
-      <div class="work-single">
-        <div class="work-info">
+<div class="work-single">
+<div class="work-info">
           <h3>Coral: Interviews</h3>
           <p>Press & Promotional Interviews – August 2025</p>
-          <p>Sound Mixer / Boom Operator</p>
-        </div>
-      </div>
-
-
-      <!-- Girl Dinner -->
-      <div class="work-single">
-        <div class="work-info">
-          <h3>Girl Dinner</h3>
-          <p>Independent Horror Short – July 2025</p>
-          <p>Sound Mixer / Boom Operator</p>
-        </div>
-      </div>
-
-      <!-- The Talk -->
-      <div class="work-single">
-        <div class="work-info">
-          <h3>The Talk</h3>
-          <p>LAVC Anti-Racism Short Film – July 2025</p>
-          <p>Sound Mixer / Boom Operator</p>
-        </div>
-      </div>
-
-      <!-- Ganas Y Grasa -->
-<div class="work-single">
-  <div class="work-info">
-    <h3>Ganas Y Grasa</h3>
-    <p>Documentary – September 2025</p>
-    <p>Sound Mixer</p>
-  </div>
+          <h3>Beyond Female</h3>
+          <p>Independent Documentary – June 2025</p>
+<p>Sound Mixer / Boom Operator</p>
+</div>
 </div>
 
-<!-- Oblation -->
+      <!-- Visit Rwanda -->
+      <div class="work-single">
+        <div class="work-info">
+          <h3>Visit Rwanda – PSG & Atlético de Madrid</h3>
+          <p>Commercial Collaboration – June 2025</p>
+          <p>Sound Assistant</p>
+        </div>
+      </div>
+
+      <!-- Beyond Female -->
+      <!-- Coral: Interviews -->
+<div class="work-single">
+<div class="work-info">
+          <h3>Beyond Female</h3>
+          <p>Independent Documentary – June 2025</p>
+          <h3>Coral: Interviews</h3>
+          <p>Press & Promotional Interviews – August 2025</p>
+<p>Sound Mixer / Boom Operator</p>
+</div>
+</div>
+
+
+<!-- Girl Dinner -->
+<div class="work-single">
+<div class="work-info">
+@@ -356,7 +370,6 @@
+</div>
+</div>
+
+      <!-- Remaining Projects -->
+<!-- Ganas Y Grasa -->
+<div class="work-single">
+<div class="work-info">
+@@ -374,62 +387,53 @@
+<p>Sound Mixer</p>
+</div>
+</div>
+
+<!-- Do You Trust Me? -->
 <div class="work-single">
   <div class="work-info">
-    <h3>Oblation</h3>
-    <p>LMU Thesis Film – October 2025</p>
-    <p>Sound Mixer</p>
+    <h3>Do You Trust Me?</h3>
+    <p>Independent Short – October 2025</p>
+    <p>Sound Mixer / Boom Operator</p>
   </div>
 </div>
-      <div class="work-single"><div class="work-info"><h3>Maneater</h3><p>Independent Short – Jul 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-      <div class="work-single"><div class="work-info"><h3>Lucky Shirt</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-      <div class="work-single"><div class="work-info"><h3>The Shoot</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-      <div class="work-single"><div class="work-info"><h3>Pulse</h3><p>Independent Short – Jul 2024</p><p>Sound Mixer</p></div></div>
-      <div class="work-single"><div class="work-info"><h3>Outed</h3><p>LMU Thesis – Feb 2025</p><p>Sound Mixer</p></div></div>
+<div class="work-single"><div class="work-info"><h3>Maneater</h3><p>Independent Short – Jul 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
+<div class="work-single"><div class="work-info"><h3>Lucky Shirt</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
+<div class="work-single"><div class="work-info"><h3>The Shoot</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
+<div class="work-single"><div class="work-info"><h3>Pulse</h3><p>Independent Short – Jul 2024</p><p>Sound Mixer</p></div></div>
+<div class="work-single"><div class="work-info"><h3>Outed</h3><p>LMU Thesis – Feb 2025</p><p>Sound Mixer</p></div></div>
 
-    </div>
-    <button class="arrow arrow-right">&#10095;</button>
-  </div>
+</div>
+<button class="arrow arrow-right">&#10095;</button>
+</div>
 </section>
 
 </main>
@@ -388,32 +130,32 @@ const tabs = document.querySelectorAll('.tab-nav button');
 const sections = document.querySelectorAll('.section');
 
 function stopAllMedia() {
-  document.querySelectorAll('iframe').forEach(f => f.src=f.src);
-  document.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime=0; });
+document.querySelectorAll('iframe').forEach(f => f.src=f.src);
+document.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime=0; });
 }
 
 tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    stopAllMedia();
-    tabs.forEach(t => t.classList.remove('active'));
-    sections.forEach(s => s.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(tab.dataset.target).classList.add('active');
-    document.getElementById(tab.dataset.target).scrollIntoView({behavior:"smooth"});
-  });
+tab.addEventListener('click', () => {
+stopAllMedia();
+tabs.forEach(t => t.classList.remove('active'));
+sections.forEach(s => s.classList.remove('active'));
+tab.classList.add('active');
+document.getElementById(tab.dataset.target).classList.add('active');
+document.getElementById(tab.dataset.target).scrollIntoView({behavior:"smooth"});
+});
 });
 
 // Carousel
 document.querySelectorAll('.carousel-container').forEach(container => {
-  const carousel = container.querySelector('.work-carousel');
-  const left = container.querySelector('.arrow-left');
-  const right = container.querySelector('.arrow-right');
-  const items = carousel.querySelectorAll('.work-single');
-  let index = 0;
-  const showItem = () => { stopAllMedia(); carousel.style.transform = `translateX(-${index*100}%)`; };
-  left.addEventListener('click', () => { index=(index-1+items.length)%items.length; showItem(); });
-  right.addEventListener('click', () => { index=(index+1)%items.length; showItem(); });
-  showItem();
+const carousel = container.querySelector('.work-carousel');
+const left = container.querySelector('.arrow-left');
+const right = container.querySelector('.arrow-right');
+const items = carousel.querySelectorAll('.work-single');
+let index = 0;
+const showItem = () => { stopAllMedia(); carousel.style.transform = `translateX(-${index*100}%)`; };
+left.addEventListener('click', () => { index=(index-1+items.length)%items.length; showItem(); });
+right.addEventListener('click', () => { index=(index+1)%items.length; showItem(); });
+showItem();
 });
 </script>
 
