@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Contact — Paola Guzman</title>
-<link rel="icon" type="image/png" href="sun.png">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="sun.png" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
 
 <style>
     body {
@@ -14,82 +13,140 @@
         font-family: "Inter", sans-serif;
         background-color: #000;
         color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
         text-align: center;
-        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; /* prevents scrolling */
     }
 
-    .contact-container {
-        max-width: 650px;
-        padding: 40px;
+    nav {
+        width: 100%;
+        padding: 25px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.3);
+        backdrop-filter: blur(6px);
+        z-index: 999;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 0 18px;
+        transition: 0.3s ease;
+    }
+
+    nav a:hover {
+        opacity: 0.6;
+    }
+
+    .logo {
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: 900;
+    }
+
+    .contact-section {
+        max-width: 700px;
+        margin: auto;
+        padding-top: 150px;
     }
 
     h1 {
-        font-size: 58px;
-        margin-bottom: 10px;
-        font-weight: 600;
-        letter-spacing: -1px;
+        font-size: 64px;
+        margin-bottom: 15px;
+        font-weight: 900;
     }
 
     p {
         font-size: 18px;
         line-height: 1.6;
         max-width: 500px;
-        margin: 0 auto 30px;
+        margin: 0 auto 40px;
+        opacity: 0.9;
     }
 
     .email-btn {
-        display: inline-block;
-        padding: 16px 32px;
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        padding: 18px 40px;
         background: white;
         color: black;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 600;
         text-decoration: none;
         border-radius: 50px;
-        transition: all 0.3s ease;
         border: 2px solid white;
+        transition: 0.3s ease;
+    }
+
+    .email-btn img {
+        width: 26px;
+        height: 26px;
+        transition: transform 1.2s ease;
+    }
+
+    .email-btn:hover img {
+        transform: rotate(180deg);
     }
 
     .email-btn:hover {
         background: none;
         color: white;
-        transform: scale(1.05);
-        cursor: pointer;
+        transform: scale(1.04);
     }
 
     footer {
-        position: absolute;
-        bottom: 20px;
-        font-size: 16px;
-        opacity: 0.6;
+        padding: 20px;
+        font-size: 15px;
+        opacity: 0.45;
     }
 
     @media (max-width: 600px) {
-        h1 { font-size: 42px; }
-        .email-btn { font-size: 18px; padding: 14px 28px; }
-        p { font-size: 16px; }
+        h1 { font-size: 45px; }
+        nav a { font-size: 16px; margin: 0 10px; }
+        .email-btn { font-size: 18px; padding: 16px 32px; }
     }
 </style>
 </head>
 
 <body>
-    <div class="contact-container">
-        <h1>Let’s Connect</h1>
-        <p>Feel free to reach out for collaborations, questions, or just to say hi!  
-        I check messages regularly and look forward to connecting!</p>
 
-        <!-- email button link -->
-        <a 
-           class="email-btn" 
-           href="mailto:paolaguzmanofficial@gmail.com?subject=Hello%20Paola!&body=Write%20your%20message%20here...">
-           Email Me
-        </a>
+<nav>
+    <div class="logo">PG</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="bts.html">BTS</a>
+        <a href="contact.html" style="opacity: 0.5;">Contact</a>
     </div>
+</nav>
 
-    <footer>© 2025 Paola Guzman</footer>
+<div class="contact-section">
+    <h1>Let’s Connect</h1>
+    <p>
+        Feel free to reach out for collaborations, questions, or just to say hi!
+        I check messages regularly and look forward to connecting.
+    </p>
+
+    <a class="email-btn" href="mailto:pxolaguzman@hotmail.com">
+        <img src="sun.png" alt="sun">
+        Email Me
+    </a>
+</div>
+
+<footer>
+    © 2025 Paola Guzman
+</footer>
+
 </body>
 </html>
