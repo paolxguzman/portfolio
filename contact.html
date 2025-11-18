@@ -130,7 +130,7 @@ button:hover { opacity:0.8; }
 
 <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
 <script>
-  (function(){emailjs.init("YOUR_USER_ID");})(); // Replace YOUR_USER_ID
+  (function(){emailjs.init("service_4w7zxiz");})(); // Replace YOUR_USER_ID
 
   const form = document.getElementById('contactForm');
   const formMessage = document.getElementById('formMessage');
@@ -147,9 +147,9 @@ button:hover { opacity:0.8; }
   form.addEventListener('submit', function(e){
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    emailjs.sendForm('service_4w7zxiz', 'service_4w7zxiz', this)
       .then(() => {
-        showMessage("Message sent! 🎉 I'll get back to you soon.", "success");
+        showMessage("Message sent! :) I'll get back to you soon.", "success");
         form.reset();
       }, (err) => {
         console.error(err);
