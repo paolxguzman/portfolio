@@ -1,12 +1,128 @@
-</a>
-<div class="work-info">
-<h3>Kyler’s New Friend</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paola Guzman — Sound Mixer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+<style>
+:root { --wine:#5c1a1b; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter', sans-serif; background:#000; color:#fff; padding-top:100px; line-height:1.6; overflow-x:hidden; }
+header { position: fixed; top:0; left:0; width:100%; padding:2rem 3rem; display:flex; justify-content: space-between; align-items:center; background:var(--wine); z-index:1000; font-size:0.9rem; text-transform: uppercase; letter-spacing:0.08rem; }
+header .logo a { text-decoration:none; color:#fff; font-weight:900; font-size:1.2rem; }
+header nav a { text-decoration:none; color:#fff; transition:opacity 0.3s; }
+header nav a:hover { opacity:0.6; }
+main { max-width:900px; margin:0 auto; padding:3rem 1.5rem; }
+.work-banner { position:relative; text-align:center; margin-bottom:3rem; max-height:400px; overflow:hidden; border-radius:8px; }
+.work-banner img { width:100%; height:100%; object-fit:cover; display:block; }
+.banner-overlay { position:absolute; bottom:0; left:0; width:100%; height:50%; background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); }
+.banner-title { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); color:#fff; font-size:2.5rem; font-weight:900; letter-spacing:0.1rem; text-transform:uppercase; text-shadow: 0 0 10px rgba(0,0,0,0.7); }
+.tab-nav { display:flex; justify-content:center; gap:2rem; margin-bottom:2rem; flex-wrap:wrap; }
+.tab-nav button { background:none; border:none; color:#fff; font-size:1rem; text-transform:uppercase; font-weight:600; cursor:pointer; letter-spacing:0.08rem; transition:opacity 0.3s, transform 0.3s; }
+.tab-nav button:hover { opacity:0.6; transform:translateY(-2px); }
+.tab-nav button.active { color:var(--wine); }
+.section { opacity:0; transform:translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; display:none; }
+.section.active { opacity:1; transform:translateY(0); display:block; }
+.work-single { margin-bottom:3rem; flex-shrink:0; width:100%; }
+.work-info { padding:1rem 0; color:#fff; }
+.work-info h3 { font-size:1.5rem; font-weight:700; margin-bottom:0.5rem; }
+.work-info p { font-size:1.1rem; opacity:0.9; margin-bottom:0.3rem; }
+.carousel-container { position:relative; overflow:hidden; }
+.work-carousel { display:flex; transition: transform 0.5s ease-in-out; }
+.arrow { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); border:none; color:#fff; font-size:2rem; cursor:pointer; padding:0.2rem 0.5rem; border-radius:4px; z-index:10; }
+.arrow-left { left:10px; }
+.arrow-right { right:10px; }
+iframe, video { width:100%; height:360px; border:none; border-radius:8px; margin-bottom:1rem; }
+.thumbnail-link { display:block; position:relative; cursor:pointer; }
+.thumbnail-link img { width:100%; border-radius:8px; }
+.thumbnail-link::after { content:"\25BA"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:3rem; color:#fff; opacity:0.8; pointer-events:none; }
+@media screen and (max-width:768px){
+  iframe, video { height:200px; }
+  .work-info h3 { font-size:1.4rem; }
+  .work-info p { font-size:1rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html">Paola Guzman</a></div>
+  <nav>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="equipment.html">Equipment</a>
+    <a href="bts.html">BTS</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<style>
+header {
+  position: fixed; 
+  top:0; left:0; 
+  width:100%;
+  padding:2rem 3rem;
+  display:flex; 
+  justify-content: space-between; 
+  align-items:center;
+  background:rgba(92,26,27,0.9); /* Same semi-transparent wine background */
+  z-index:1000;
+  font-size:0.9rem; 
+  text-transform: uppercase; 
+  letter-spacing:0.08rem;
+}
+header .logo a { 
+  text-decoration:none; 
+  color:#fff; 
+  font-weight:900; 
+  font-size:1.2rem; 
+}
+header nav a { 
+  text-decoration:none; 
+  color:#fff; 
+  margin-left:2rem; 
+  transition:opacity 0.3s; 
+}
+header nav a:hover { 
+  opacity:0.6; 
+}
+</style>
+
+<main>
+  <div class="work-banner">
+    <img src="13image.JPG" alt="Previous Work">
+    <div class="banner-overlay"></div>
+    <h1 class="banner-title">PREVIOUS WORK</h1>
+  </div>
+
+  <div class="tab-nav">
+    <button data-target="narrative" class="active">Narrative</button>
+    <button data-target="commercial">Commercial</button>
+    <button data-target="personal">Personal</button>
+    <button data-target="comingsoon">Coming Soon</button>
+  </div>
+
+  <!-- NARRATIVE -->
+  <section id="narrative" class="section active">
+    <h2>Narrative</h2>
+    <div class="carousel-container">
+      <button class="arrow arrow-left">&#10094;</button>
+      <div class="work-carousel">
+
+        <!-- Kyler’s New Friend -->
+<div class="work-single">
+  <a href="https://www.youtube.com/watch?v=frPczQZ1Jek" target="_blank" class="thumbnail-link">
+    <img src="https://img.youtube.com/vi/frPczQZ1Jek/hqdefault.jpg" alt="Kyler’s New Friend Thumbnail">
+  </a>
+  <div class="work-info">
+    <h3>Kyler’s New Friend</h3>
     <p>LAVC Thesis Film</p>
     <p>LAVC Film Production Major Thesis Film</p>
-<p>Production Date: April 2025</p>
-<p>Job: Sound Mixer / Boom Operator</p>
-<p>Winner – LAVC Cinema and Media Arts Student Showcase, Achievement in Sound Design</p>
-</div>
+    <p>Production Date: April 2025</p>
+    <p>Job: Sound Mixer / Boom Operator</p>
+    <p>Winner – LAVC Cinema and Media Arts Student Showcase, Achievement in Sound Design</p>
+  </div>
 </div>
 
 <!-- Santos -->
@@ -23,26 +139,26 @@
   </div>
 </div>
 
-<!-- Dear Hollywood -->
-<div class="work-single">
-<a href="https://youtu.be/_1TrcqtF44E" target="_blank" class="thumbnail-link">
+        <!-- Dear Hollywood -->
+        <div class="work-single">
+          <a href="https://youtu.be/_1TrcqtF44E" target="_blank" class="thumbnail-link">
 @@ -301,43 +315,43 @@
-<div class="carousel-container">
-<button class="arrow arrow-left">&#10094;</button>
-<div class="work-carousel">
+  <div class="carousel-container">
+    <button class="arrow arrow-left">&#10094;</button>
+    <div class="work-carousel">
 
       <!-- Santos -->
 <!-- Visit Rwanda -->
-<div class="work-single">
-<div class="work-info">
+      <div class="work-single">
+        <div class="work-info">
           <h3>Santos</h3>
           <p>Vertical Series – August 2025</p>
           <p>BTS Photographer</p>
           <h3>Visit Rwanda – PSG & Atlético de Madrid</h3>
           <p>Commercial Collaboration – June 2025</p>
           <p>Sound Assistant</p>
-</div>
-</div>
+        </div>
+      </div>
 
       <!-- Coral: Interviews -->
 <!-- Do You Trust Me? -->
@@ -55,15 +171,15 @@
 </div>
       
        <!-- Beyond Female -->
-<div class="work-single">
-<div class="work-info">
+      <div class="work-single">
+        <div class="work-info">
           <h3>Coral: Interviews</h3>
           <p>Press & Promotional Interviews – August 2025</p>
           <h3>Beyond Female</h3>
           <p>Independent Documentary – June 2025</p>
-<p>Sound Mixer / Boom Operator</p>
-</div>
-</div>
+          <p>Sound Mixer / Boom Operator</p>
+        </div>
+      </div>
 
       <!-- Visit Rwanda -->
       <div class="work-single">
@@ -76,31 +192,31 @@
 
       <!-- Beyond Female -->
       <!-- Coral: Interviews -->
-<div class="work-single">
-<div class="work-info">
+      <div class="work-single">
+        <div class="work-info">
           <h3>Beyond Female</h3>
           <p>Independent Documentary – June 2025</p>
           <h3>Coral: Interviews</h3>
           <p>Press & Promotional Interviews – August 2025</p>
-<p>Sound Mixer / Boom Operator</p>
-</div>
-</div>
+          <p>Sound Mixer / Boom Operator</p>
+        </div>
+      </div>
 
 
-<!-- Girl Dinner -->
-<div class="work-single">
-<div class="work-info">
+      <!-- Girl Dinner -->
+      <div class="work-single">
+        <div class="work-info">
 @@ -356,7 +370,6 @@
-</div>
-</div>
+        </div>
+      </div>
 
       <!-- Remaining Projects -->
-<!-- Ganas Y Grasa -->
+      <!-- Ganas Y Grasa -->
 <div class="work-single">
-<div class="work-info">
+  <div class="work-info">
 @@ -374,62 +387,53 @@
-<p>Sound Mixer</p>
-</div>
+    <p>Sound Mixer</p>
+  </div>
 </div>
 
 <!-- Do You Trust Me? -->
@@ -111,15 +227,15 @@
     <p>Sound Mixer / Boom Operator</p>
   </div>
 </div>
-<div class="work-single"><div class="work-info"><h3>Maneater</h3><p>Independent Short – Jul 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-<div class="work-single"><div class="work-info"><h3>Lucky Shirt</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-<div class="work-single"><div class="work-info"><h3>The Shoot</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-<div class="work-single"><div class="work-info"><h3>Pulse</h3><p>Independent Short – Jul 2024</p><p>Sound Mixer</p></div></div>
-<div class="work-single"><div class="work-info"><h3>Outed</h3><p>LMU Thesis – Feb 2025</p><p>Sound Mixer</p></div></div>
+      <div class="work-single"><div class="work-info"><h3>Maneater</h3><p>Independent Short – Jul 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
+      <div class="work-single"><div class="work-info"><h3>Lucky Shirt</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
+      <div class="work-single"><div class="work-info"><h3>The Shoot</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
+      <div class="work-single"><div class="work-info"><h3>Pulse</h3><p>Independent Short – Jul 2024</p><p>Sound Mixer</p></div></div>
+      <div class="work-single"><div class="work-info"><h3>Outed</h3><p>LMU Thesis – Feb 2025</p><p>Sound Mixer</p></div></div>
 
-</div>
-<button class="arrow arrow-right">&#10095;</button>
-</div>
+    </div>
+    <button class="arrow arrow-right">&#10095;</button>
+  </div>
 </section>
 
 </main>
@@ -130,32 +246,32 @@ const tabs = document.querySelectorAll('.tab-nav button');
 const sections = document.querySelectorAll('.section');
 
 function stopAllMedia() {
-document.querySelectorAll('iframe').forEach(f => f.src=f.src);
-document.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime=0; });
+  document.querySelectorAll('iframe').forEach(f => f.src=f.src);
+  document.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime=0; });
 }
 
 tabs.forEach(tab => {
-tab.addEventListener('click', () => {
-stopAllMedia();
-tabs.forEach(t => t.classList.remove('active'));
-sections.forEach(s => s.classList.remove('active'));
-tab.classList.add('active');
-document.getElementById(tab.dataset.target).classList.add('active');
-document.getElementById(tab.dataset.target).scrollIntoView({behavior:"smooth"});
-});
+  tab.addEventListener('click', () => {
+    stopAllMedia();
+    tabs.forEach(t => t.classList.remove('active'));
+    sections.forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.target).classList.add('active');
+    document.getElementById(tab.dataset.target).scrollIntoView({behavior:"smooth"});
+  });
 });
 
 // Carousel
 document.querySelectorAll('.carousel-container').forEach(container => {
-const carousel = container.querySelector('.work-carousel');
-const left = container.querySelector('.arrow-left');
-const right = container.querySelector('.arrow-right');
-const items = carousel.querySelectorAll('.work-single');
-let index = 0;
-const showItem = () => { stopAllMedia(); carousel.style.transform = `translateX(-${index*100}%)`; };
-left.addEventListener('click', () => { index=(index-1+items.length)%items.length; showItem(); });
-right.addEventListener('click', () => { index=(index+1)%items.length; showItem(); });
-showItem();
+  const carousel = container.querySelector('.work-carousel');
+  const left = container.querySelector('.arrow-left');
+  const right = container.querySelector('.arrow-right');
+  const items = carousel.querySelectorAll('.work-single');
+  let index = 0;
+  const showItem = () => { stopAllMedia(); carousel.style.transform = `translateX(-${index*100}%)`; };
+  left.addEventListener('click', () => { index=(index-1+items.length)%items.length; showItem(); });
+  right.addEventListener('click', () => { index=(index+1)%items.length; showItem(); });
+  showItem();
 });
 </script>
 
