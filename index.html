@@ -160,6 +160,22 @@ header nav a:hover { opacity:0.6; }
 }
 </style>
 </head>
+  <script>
+  // Disable zoom with keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && 
+        (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+      e.preventDefault();
+    }
+  });
+
+  // Disable zoom with mouse scroll + Ctrl/Cmd
+  document.addEventListener('wheel', function(e) {
+    if (e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+</script>
 <body>
 
 <header>
