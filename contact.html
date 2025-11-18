@@ -113,6 +113,22 @@ header nav a:hover {
     <button type="submit">Send Message</button>
   </form>
 </main>
+<script>
+  // Disable zoom with keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && 
+        (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+      e.preventDefault();
+    }
+  });
 
+  // Disable zoom with mouse scroll + Ctrl/Cmd
+  document.addEventListener('wheel', function(e) {
+    if (e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+</script>
+  
 </body>
 </html>
