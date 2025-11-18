@@ -1,152 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>Contact — Paola Guzman</title>
-<link rel="icon" type="image/png" href="sun.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Paola Guzman — Contact</title>
+<link rel="icon" type="image/png" href="sun.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        margin: 0;
-        font-family: "Inter", sans-serif;
-        background-color: #000;
-        color: white;
-        text-align: center;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden; /* prevents scrolling */
-    }
+:root { --wine:#5c1a1b; }
+* { margin:0; padding:0; box-sizing:border-box; }
 
-    nav {
-        width: 100%;
-        padding: 25px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: rgba(0,0,0,0.3);
-        backdrop-filter: blur(6px);
-        z-index: 999;
-    }
+body {
+  font-family:'Inter', sans-serif;
+  background:#000 url('myphoto.jpg') center center/cover no-repeat fixed;
+  color:#fff;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        margin: 0 18px;
-        transition: 0.3s ease;
-    }
+body::after {
+  content:"";
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:#000 url('myphoto.jpg') center center/cover no-repeat;
+  opacity:0.1;
+  z-index:-1;
+}
 
-    nav a:hover {
-        opacity: 0.6;
-    }
+header {
+  position: fixed; top:0; left:0; width:100%;
+  padding:2rem 3rem;
+  display:flex; justify-content: space-between; align-items:center;
+  background:rgba(92,26,27,0.9);
+  z-index:1000;
+  font-size:0.9rem;
+  text-transform: uppercase;
+  letter-spacing:0.08rem;
+}
+header .logo a { text-decoration:none; color:#fff; font-weight:900; font-size:1.2rem; }
+header nav a { text-decoration:none; color:#fff; margin-left:2rem; transition:opacity 0.3s; }
+header nav a:hover { opacity:0.6; }
 
-    .logo {
-        font-size: 22px;
-        letter-spacing: 1px;
-        font-weight: 900;
-    }
+main {
+  max-width:900px;
+  margin:0 auto;
+  padding:120px 1.5rem 200px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
 
-    .contact-section {
-        max-width: 700px;
-        margin: auto;
-        padding-top: 150px;
-    }
+h1 { font-size:3rem; font-weight:900; margin-bottom:1rem; }
+p { font-size:1.1rem; opacity:0.9; margin-bottom:1.5rem; }
 
-    h1 {
-        font-size: 64px;
-        margin-bottom: 15px;
-        font-weight: 900;
-    }
+.contact-info {
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  font-size:1.2rem;
+  margin-bottom:2rem;
+}
+.contact-info a {
+  color:#fff;
+  text-decoration:none;
+  transition:opacity 0.3s;
+}
+.contact-info a:hover { opacity:0.6; }
 
-    p {
-        font-size: 18px;
-        line-height: 1.6;
-        max-width: 500px;
-        margin: 0 auto 40px;
-        opacity: 0.9;
-    }
+/* NEW BUTTON STYLE (KEEPS SAME FORMAT BUT INTERACTIVE) */
+.email-button {
+  margin-top:30px;
+  background:var(--wine);
+  color:white;
+  padding:1rem 2rem;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:1.1rem;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:0.3s ease;
+}
 
-    .email-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 14px;
-        padding: 18px 40px;
-        background: white;
-        color: black;
-        font-size: 22px;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 50px;
-        border: 2px solid white;
-        transition: 0.3s ease;
-    }
+.email-button img {
+  width:22px;
+  height:22px;
+  transition: transform 0.9s ease;
+}
 
-    .email-btn img {
-        width: 26px;
-        height: 26px;
-        transition: transform 1.2s ease;
-    }
+.email-button:hover img {
+  transform: rotate(180deg);
+}
 
-    .email-btn:hover img {
-        transform: rotate(180deg);
-    }
-
-    .email-btn:hover {
-        background: none;
-        color: white;
-        transform: scale(1.04);
-    }
-
-    footer {
-        padding: 20px;
-        font-size: 15px;
-        opacity: 0.45;
-    }
-
-    @media (max-width: 600px) {
-        h1 { font-size: 45px; }
-        nav a { font-size: 16px; margin: 0 10px; }
-        .email-btn { font-size: 18px; padding: 16px 32px; }
-    }
+.email-button:hover {
+  opacity:0.8;
+}
 </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">PG</div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="equipment.html">Equipment</a>
-        <a href="bts.html">BTS</a>
-        <a href="contact.html" style="opacity: 0.5;">Contact</a>
-    </div>
-</nav>
+<header>
+  <div class="logo"><a href="index.html">Paola Guzman</a></div>
+  <nav>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="equipment.html">Equipment</a>
+    <a href="bts.html">BTS</a>
+    <a href="contact.html" style="opacity:0.7;">Contact</a>
+  </nav>
+</header>
 
-<div class="contact-section">
-    <h1>Let’s Connect</h1>
-    <p>
-        Feel free to reach out for collaborations, questions, or just to say hi!
-        I check messages regularly and look forward to connecting.
-    </p>
+<main>
+  <h1>Contact</h1>
+  <p>
+    Feel free to reach out for collaborations, questions, or just to say hi!  
+    I check messages regularly and look forward to connecting.
+  </p>
 
-    <a class="email-btn" href="mailto:pxolaguzman@hotmail.com">
-        <img src="sun.png" alt="sun">
-        Email Me
-    </a>
-</div>
+  <div class="contact-info">
+    <a href="https://www.instagram.com/paolxguzman" target="_blank">Instagram: @paolxguzman</a>
+  </div>
 
-<footer>
-    © 2025 Paola Guzman
-</footer>
+  <!-- REPLACED FORM WITH EMAIL BUTTON -->
+  <button class="email-button" onclick="openEmail()">
+    <img src="sun.png" alt="sun"> Send Email
+  </button>
+</main>
+
+<script>
+function openEmail() {
+  window.location.href = "mailto:pxolaguzman@hotmail.com";
+}
+
+// Disable zoom controls (kept from original)
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && ["+", "-", "=", "0"].includes(e.key)) {
+    e.preventDefault();
+  }
+});
+document.addEventListener('wheel', function(e) {
+  if (e.ctrlKey || e.metaKey) e.preventDefault();
+}, { passive: false });
+</script>
 
 </body>
 </html>
