@@ -1,0 +1,258 @@
+/* ---------------- Root & Reset ---------------- */
+:root { --wine: #5c1a1b; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  background: #000;
+  color: #fff;
+  padding-top: 100px;
+  line-height: 1.6;
+  overflow-x: hidden;
+
+  /* Prevent iOS text zoom */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ---------------- Header ---------------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(92,26,27,0.9); /* semi-transparent wine */
+  z-index: 1000;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 2rem;
+  transition: opacity 0.3s;
+}
+
+header nav a:hover {
+  opacity: 0.6;
+}
+
+/* ---------------- Main ---------------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ---------------- Work Banner ---------------- */
+.work-banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.work-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+.banner-title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+/* ---------------- Tabs ---------------- */
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.08rem;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.tab-nav button:hover {
+  opacity: 0.6;
+  transform: translateY(-2px);
+}
+
+.tab-nav button.active {
+  color: var(--wine);
+}
+
+/* ---------------- Sections ---------------- */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  display: none;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
+  display: block;
+}
+
+/* ---------------- Work Items ---------------- */
+.work-single {
+  margin-bottom: 3rem;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.work-info {
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.work-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.work-info p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 0.3rem;
+}
+
+/* ---------------- Carousel ---------------- */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+/* ---------------- Media & Thumbnails ---------------- */
+iframe, video {
+  width: 100%;
+  height: 360px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.thumbnail-link {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.thumbnail-link img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbnail-link::after {
+  content: "\25BA";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 3rem;
+  color: #fff;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width:768px) {
+  iframe, video {
+    height: 200px;
+  }
+  .work-info h3 {
+    font-size: 1.4rem;
+  }
+  .work-info p {
+    font-size: 1rem;
+  }
+}
+
+/* ---------------- Match photo & video dimensions ---------------- */
+.work-single iframe, 
+.work-single img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  object-fit: cover;
+  display: block;
+}
