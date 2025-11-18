@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Paola Guzman — Sound Mixer</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
 <style>
 :root { --wine:#5c1a1b; }
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Inter', sans-serif; background:#000; color:#fff; padding-top:100px; line-height:1.6; overflow-x:hidden; }
-header { position: fixed; top:0; left:0; width:100%; padding:2rem 3rem; display:flex; justify-content: space-between; align-items:center; background:var(--wine); z-index:1000; font-size:0.9rem; text-transform: uppercase; letter-spacing:0.08rem; }
+header {
+  position: fixed; top:0; left:0; width:100%;
+  padding:2rem 3rem; display:flex; justify-content: space-between; align-items:center;
+  background:rgba(92,26,27,0.9); z-index:1000;
+  font-size:0.9rem; text-transform: uppercase; letter-spacing:0.08rem;
+}
 header .logo a { text-decoration:none; color:#fff; font-weight:900; font-size:1.2rem; }
-header nav a { text-decoration:none; color:#fff; transition:opacity 0.3s; }
+header nav a { text-decoration:none; color:#fff; margin-left:2rem; transition:opacity 0.3s; }
 header nav a:hover { opacity:0.6; }
 main { max-width:900px; margin:0 auto; padding:3rem 1.5rem; }
 .work-banner { position:relative; text-align:center; margin-bottom:3rem; max-height:400px; overflow:hidden; border-radius:8px; }
@@ -24,7 +29,7 @@ main { max-width:900px; margin:0 auto; padding:3rem 1.5rem; }
 .tab-nav button.active { color:var(--wine); }
 .section { opacity:0; transform:translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; display:none; }
 .section.active { opacity:1; transform:translateY(0); display:block; }
-.work-single { margin-bottom:3rem; flex-shrink:0; width:100%; }
+.work-single { flex:0 0 100%; margin-bottom:3rem; }
 .work-info { padding:1rem 0; color:#fff; }
 .work-info h3 { font-size:1.5rem; font-weight:700; margin-bottom:0.5rem; }
 .work-info p { font-size:1.1rem; opacity:0.9; margin-bottom:0.3rem; }
@@ -43,24 +48,14 @@ iframe, video { width:100%; height:360px; border:none; border-radius:8px; margin
   .work-info p { font-size:1rem; }
 }
 </style>
-</head>
-  <script>
-  // Disable zoom with keyboard shortcuts
-  document.addEventListener('keydown', function(e) {
-    if ((e.ctrlKey || e.metaKey) && 
-        (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
-      e.preventDefault();
-    }
-  });
-
-  // Disable zoom with mouse scroll + Ctrl/Cmd
-  document.addEventListener('wheel', function(e) {
-    if (e.ctrlKey || e.metaKey) {
-      e.preventDefault();
-    }
-  }, { passive: false });
+<script>
+// Disable zoom with keyboard shortcuts & mouse
+document.addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && ['+','-','=','0'].includes(e.key)) e.preventDefault();
+});
+document.addEventListener('wheel', e => { if(e.ctrlKey||e.metaKey) e.preventDefault(); }, { passive:false });
 </script>
-
+</head>
 <body>
 
 <header>
@@ -73,38 +68,6 @@ iframe, video { width:100%; height:360px; border:none; border-radius:8px; margin
     <a href="contact.html">Contact</a>
   </nav>
 </header>
-
-<style>
-header {
-  position: fixed; 
-  top:0; left:0; 
-  width:100%;
-  padding:2rem 3rem;
-  display:flex; 
-  justify-content: space-between; 
-  align-items:center;
-  background:rgba(92,26,27,0.9); /* Same semi-transparent wine background */
-  z-index:1000;
-  font-size:0.9rem; 
-  text-transform: uppercase; 
-  letter-spacing:0.08rem;
-}
-header .logo a { 
-  text-decoration:none; 
-  color:#fff; 
-  font-weight:900; 
-  font-size:1.2rem; 
-}
-header nav a { 
-  text-decoration:none; 
-  color:#fff; 
-  margin-left:2rem; 
-  transition:opacity 0.3s; 
-}
-header nav a:hover { 
-  opacity:0.6; 
-}
-</style>
 
 <main>
   <div class="work-banner">
@@ -128,132 +91,45 @@ header nav a:hover {
       <div class="work-carousel">
 
         <!-- Kyler’s New Friend -->
-<div class="work-single">
-  <a href="https://www.youtube.com/watch?v=frPczQZ1Jek" target="_blank" class="thumbnail-link">
-    <img src="https://img.youtube.com/vi/frPczQZ1Jek/hqdefault.jpg" alt="Kyler’s New Friend Thumbnail">
-  </a>
-  <div class="work-info">
-    <h3>Kyler’s New Friend</h3>
-    <p>LAVC Thesis Film</p>
-    <p>LAVC Film Production Major Thesis Film</p>
-    <p>Production Date: April 2025</p>
-    <p>Job: Sound Mixer / Boom Operator</p>
-    <p>Winner – LAVC Cinema and Media Arts Student Showcase, Achievement in Sound Design</p>
-  </div>
-</div>
-
-<!-- Santos -->
-<div class="work-single">
-  <a href="https://www.reelshort.com/episodes/episode-1-santos-the-book-of-alina-68f2cfb5b24678ce9104ac6a-fe31rl64qv?play_time=1" 
-     target="_blank" 
-     class="thumbnail-link">
-    <img src="santos-thumbnail.jpg" alt="Santos Thumbnail">
-  </a>
-  <div class="work-info">
-    <h3>Santos</h3>
-    <p>Vertical Series – August 2025</p>
-    <p>BTS Photographer</p>
-  </div>
-</div>
-
-        <!-- Dear Hollywood -->
         <div class="work-single">
-          <a href="https://youtu.be/_1TrcqtF44E" target="_blank" class="thumbnail-link">
-@@ -301,43 +315,43 @@
-  <div class="carousel-container">
-    <button class="arrow arrow-left">&#10094;</button>
-    <div class="work-carousel">
-
-      <!-- Santos -->
-<!-- Visit Rwanda -->
-      <div class="work-single">
-        <div class="work-info">
-          <h3>Santos</h3>
-          <p>Vertical Series – August 2025</p>
-          <p>BTS Photographer</p>
-          <h3>Visit Rwanda – PSG & Atlético de Madrid</h3>
-          <p>Commercial Collaboration – June 2025</p>
-          <p>Sound Assistant</p>
+          <a href="https://www.youtube.com/watch?v=frPczQZ1Jek" target="_blank" class="thumbnail-link">
+            <img src="https://img.youtube.com/vi/frPczQZ1Jek/hqdefault.jpg" alt="Kyler’s New Friend Thumbnail">
+          </a>
+          <div class="work-info">
+            <h3>Kyler’s New Friend</h3>
+            <p>LAVC Thesis Film</p>
+            <p>Sound Mixer / Boom Operator</p>
+            <p>Production Date: April 2025</p>
+            <p>Winner – LAVC Cinema and Media Arts Student Showcase, Achievement in Sound Design</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Coral: Interviews -->
-<!-- Do You Trust Me? -->
-<div class="work-single">
-  <div class="work-info">
-    <h3>Do You Trust Me?</h3>
-    <p>Independent Short – October 2025</p>
-    <p>Sound Mixer / Boom Operator</p>
-  </div>
-</div>
-      
-       <!-- Beyond Female -->
-      <div class="work-single">
-        <div class="work-info">
-          <h3>Coral: Interviews</h3>
-          <p>Press & Promotional Interviews – August 2025</p>
-          <h3>Beyond Female</h3>
-          <p>Independent Documentary – June 2025</p>
-          <p>Sound Mixer / Boom Operator</p>
+        <!-- Santos -->
+        <div class="work-single">
+          <a href="https://www.reelshort.com/episodes/episode-1-santos-the-book-of-alina-68f2cfb5b24678ce9104ac6a-fe31rl64qv?play_time=1" 
+             target="_blank" class="thumbnail-link">
+            <img src="santos-thumbnail.jpg" alt="Santos Thumbnail">
+          </a>
+          <div class="work-info">
+            <h3>Santos</h3>
+            <p>Vertical Series – August 2025</p>
+            <p>BTS Photographer</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Visit Rwanda -->
-      <div class="work-single">
-        <div class="work-info">
-          <h3>Visit Rwanda – PSG & Atlético de Madrid</h3>
-          <p>Commercial Collaboration – June 2025</p>
-          <p>Sound Assistant</p>
+        <!-- Do You Trust Me? -->
+        <div class="work-single">
+          <div class="work-info">
+            <h3>Do You Trust Me?</h3>
+            <p>Independent Short – October 2025</p>
+            <p>Sound Mixer / Boom Operator</p>
+          </div>
         </div>
+
       </div>
-
-      <!-- Beyond Female -->
-      <!-- Coral: Interviews -->
-      <div class="work-single">
-        <div class="work-info">
-          <h3>Beyond Female</h3>
-          <p>Independent Documentary – June 2025</p>
-          <h3>Coral: Interviews</h3>
-          <p>Press & Promotional Interviews – August 2025</p>
-          <p>Sound Mixer / Boom Operator</p>
-        </div>
-      </div>
-
-
-      <!-- Girl Dinner -->
-      <div class="work-single">
-        <div class="work-info">
-@@ -356,7 +370,6 @@
-        </div>
-      </div>
-
-      <!-- Remaining Projects -->
-      <!-- Ganas Y Grasa -->
-<div class="work-single">
-  <div class="work-info">
-@@ -374,62 +387,53 @@
-    <p>Sound Mixer</p>
-  </div>
-</div>
-
-<!-- Do You Trust Me? -->
-<div class="work-single">
-  <div class="work-info">
-    <h3>Do You Trust Me?</h3>
-    <p>Independent Short – October 2025</p>
-    <p>Sound Mixer / Boom Operator</p>
-  </div>
-</div>
-      <div class="work-single"><div class="work-info"><h3>Maneater</h3><p>Independent Short – Jul 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-      <div class="work-single"><div class="work-info"><h3>Lucky Shirt</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-      <div class="work-single"><div class="work-info"><h3>The Shoot</h3><p>LAVC Thesis – Apr 2025</p><p>Sound Mixer / Boom Operator</p></div></div>
-      <div class="work-single"><div class="work-info"><h3>Pulse</h3><p>Independent Short – Jul 2024</p><p>Sound Mixer</p></div></div>
-      <div class="work-single"><div class="work-info"><h3>Outed</h3><p>LMU Thesis – Feb 2025</p><p>Sound Mixer</p></div></div>
-
+      <button class="arrow arrow-right">&#10095;</button>
     </div>
-    <button class="arrow arrow-right">&#10095;</button>
-  </div>
-</section>
+  </section>
 
 </main>
 
@@ -261,12 +137,10 @@ header nav a:hover {
 // Tabs
 const tabs = document.querySelectorAll('.tab-nav button');
 const sections = document.querySelectorAll('.section');
-
 function stopAllMedia() {
   document.querySelectorAll('iframe').forEach(f => f.src=f.src);
   document.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime=0; });
 }
-
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     stopAllMedia();
